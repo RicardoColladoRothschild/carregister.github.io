@@ -25,6 +25,7 @@ function showMe(){
     while(AutoSaved.length > 0){
         let currentObject = AutoSaved.shift();
         
-        allVehicle += currentObject.maker + "| " + currentObject.model + "| " + currentObject.year + "\n";
+        allVehicule += currentObject.maker + "| " + currentObject.model + "| " + currentObject.year + "\n";
     }
+    alert(allVehicule);
 }
