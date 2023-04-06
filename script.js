@@ -4,17 +4,27 @@ function Auto(maker,model,year){
     this.year = year;
 }
 
-let AutosSaved = [];
+let AutoSaved = [];
+
 let maker;
 let model;
 let year;
+let vehNew;
 function saveACar(){
     maker = document.getElementById("maker").value;
     model = document.getElementById("model").value;
     year = document.getElementById("year").value;
-    let vehNew = new Auto(maker,model,year);
-    AutosSaved.push(vehNew);
+    vehNew = new Auto(maker,model,year);
+   // console.log(vehNew);
+    AutoSaved.push(vehNew);
+    
 }
+
 function showMe(){
-    alert(AutosSaved);
+    let allVehicule = "";
+    while(AutoSaved.length > 0){
+        let currentObject = AutoSaved.shift();
+        
+        allVehicle += currentObject.maker + "| " + currentObject.model + "| " + currentObject.year + "\n";
+    }
 }
