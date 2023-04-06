@@ -15,8 +15,9 @@ function saveACar(){
     model = document.getElementById("model").value;
     year = document.getElementById("year").value;
     vehNew = new Auto(maker,model,year);
-   // console.log(vehNew);
+  
     AutoSaved.push(vehNew);
+    alert("Car Was Added");
     
 }
 
